@@ -55,5 +55,10 @@ body {
 }
 
 .button:active {
-    transform: scale(0.95); 
+    transform: scale(0.95); /
+}
+
+.button:disabled {
+    opacity: 0.5; /
+    cursor: not-allowed; 
 }

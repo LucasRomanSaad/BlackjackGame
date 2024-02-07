@@ -47,8 +47,12 @@ function startGame() {
     dealerCards = [firstDealerCard, secondDealerCard]
     dealerSum = firstDealerCard + secondDealerCard
 
+    
+    document.getElementById("new-card-button").disabled = false;
+
     renderGame()
 }
+
 
 function renderGame() {
     playerCardsEl.textContent = "Player's Cards: "
@@ -77,6 +81,7 @@ function renderGame() {
         }
     } else {
         message = "You bust! Dealer wins!"
+        document.getElementById("new-card-button").disabled = true; // Disables the button
     }
 
     if (isAlive && !hasBlackJack && message !== "You bust! Dealer wins!") {
@@ -85,8 +90,6 @@ function renderGame() {
 
     messageEl.textContent = message
 
-    // Apply effects and animations
-    applyAnimations()
 }
 
 function newCard() {
@@ -118,32 +121,7 @@ function hold() {
         isAlive = false
         messageEl.textContent = message
 
-        // Apply effects and animations
-        applyAnimations()
+       
     }
-}
-
-function applyAnimations() {
-    // Increase and decrease font size for message display
-    messageEl.classList.add('animate');
-    setTimeout(() => {
-        messageEl.classList.remove('animate');
-    }, 500);
-    
-    // Rotate cards for dealer and player
-    document.querySelectorAll('.container').forEach(container => {
-        container.classList.add('rotate');
-        setTimeout(() => {
-            container.classList.remove('rotate');
-        }, 500);
-    });
-
-    // Shake buttons
-    document.querySelectorAll('.button').forEach(button => {
-        button.classList.add('shake');
-        setTimeout(() => {
-            button.classList.remove('shake');
-        }, 500);
-    });
 }
 
