@@ -1,0 +1,59 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+    background-image: url("background.jpg");
+    background-size: cover;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.heading {
+    color: goldenrod;
+    font-size: 3em;
+    transition: font-size 0.5s;
+}
+
+.message {
+    font-style: italic;
+    font-size: 1.5em;
+    transition: font-size 0.5s;
+}
+
+.container {
+    margin-bottom: 50px;
+    margin-top: 40px;
+    vertical-align: top;
+    transition: transform 0.5s;
+}
+
+.cards, .sum {
+    font-size: 1.2em;
+}
+
+.buttons {
+    transition: transform 0.5s;
+}
+
+.button {
+    color: #016f32;
+    width: 150px;
+    background: goldenrod;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.button:hover {
+    background-color: #ffd700; 
+}
+
+.button:active {
+    transform: scale(0.95); 
+}

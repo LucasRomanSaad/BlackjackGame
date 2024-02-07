@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="heading">Blackjack</h1>
+    <p id="message-el" class="message">Want to play a round?</p>
+    <div id="dealer-container" class="container">
+        <p id="dealer-cards-el" class="cards">Dealer's Cards:</p>
+        <p id="dealer-sum-el" class="sum">Dealer's Sum:</p>
+    </div>
+    <div id="player-container" class="container">
+        <p id="player-sum-el" class="sum">Player's Sum:</p>
+        <p id="player-cards-el" class="cards">Player's Cards:</p>
+    </div>
+    <div id="buttons-container" class="buttons">
+        <button onclick="newCard()" class="button">NEW CARD</button>
+        <button onclick="hold()" class="button">HOLD</button>
+        <button onclick="startGame()" class="button">START GAME</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
