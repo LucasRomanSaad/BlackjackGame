@@ -43,7 +43,7 @@ function startGame() {
     playerSum = firstPlayerCard + secondPlayerCard
 
     let firstDealerCard = getRandomCard()
-    let secondDealerCard = getRandomCard()
+    let secondDealerCard = ""
     dealerCards = [firstDealerCard, secondDealerCard]
     dealerSum = firstDealerCard + secondDealerCard
 
