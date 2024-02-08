@@ -43,9 +43,8 @@ function startGame() {
     playerSum = firstPlayerCard + secondPlayerCard
 
     let firstDealerCard = getRandomCard()
-    let secondDealerCard = getRandomCard()
-    dealerCards = [firstDealerCard, secondDealerCard]
-    dealerSum = firstDealerCard + secondDealerCard
+    dealerCards = [firstDealerCard,]
+    dealerSum = firstDealerCard 
 
     
     document.getElementById("new-card-button").disabled = false;
@@ -106,7 +105,7 @@ function hold() {
         while (dealerSum < 17) {
             let newDealerCard = getRandomCard()
             dealerCards.push(newDealerCard)
-            dealerSum += newDealerCard
+            dealerSum += parseInt(newDealerCard)
             renderGame()
         }
         if (dealerSum > 21) {
